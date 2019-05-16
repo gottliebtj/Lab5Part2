@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+output.0: query.csfasta.0 genome.fasta rmapper-cs
+
+output.2: query.csfasta.2 genome.fasta rmapper-cs
+
+output.3: query.csfasta.3 genome.fasta rmapper-cs
+
+output.4: query.csfasta.4 genome.fasta rmapper-cs
