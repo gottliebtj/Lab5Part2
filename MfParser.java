@@ -5,7 +5,6 @@ import java.util.*;
 
 public class MfParser {
 
-
   public void mapCommands(String fileName){
     Map<String, String> map = new HashMap<String, String>();
     BufferedReader reader;
@@ -13,7 +12,7 @@ public class MfParser {
 			reader = new BufferedReader(new FileReader(fileName));
 			String line = reader.readLine();
 			while (line != null) {
-        if (line.length() >0) {
+        if (line.length()>0 && line.indexOf(':')>0) {
           String [] splitLine = line.split(":");
           //System.out.println(splitLine[1]);
           //add to the map

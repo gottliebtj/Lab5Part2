@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-class Graph
+public class Graph
    {
      //Number Of Vertecies
        private int V;
@@ -13,7 +13,7 @@ class Graph
            for (int i=0; i<v; ++i)
                adj[i] = new LinkedList<Vertex>();
        }
-       void addEdge(int u, int v ,String s)
+       public void addEdge(int u, int v ,String s)
        {
            Vertex node = new Vertex(v ,s);
            adj[u].add(node);// Add v to u's list
@@ -21,7 +21,7 @@ class Graph
 
        // A recursive function used by shortestPath.
        // See below link for details
-       void topologicalSortUtil(int v, Boolean visited[], Stack stack)
+       public void topologicalSortUtil(int v, Boolean visited[], Stack stack)
        {
            // Mark the current node as visited.
            visited[v] = true;
@@ -40,7 +40,7 @@ class Graph
            stack.push(new Integer(v));
        }
 
-       void findCycles(){
+       public void findCycles(){
           Stack stack = new Stack();
           int dist[] = new int[V];
 
@@ -62,4 +62,4 @@ class Graph
         }
       }
 
-      //Adapted From https://www.geeksforgeeks.org/topological-sorting/
+  //Adapted From https://www.geeksforgeeks.org/topological-sorting/
