@@ -41,6 +41,7 @@ public class Graph
        }
 
        public void findCycles(){
+         try{
           Stack stack = new Stack();
           int dist[] = new int[V];
 
@@ -56,9 +57,16 @@ public class Graph
                   topologicalSortUtil(i, visited, stack);
                 }
           }
+          BufferedWriter writer = new BufferedWriter(new FileWriter("out.txt"));
           while(!stack.empty()){
-            stack.pop();
+            writer.write(stack.pop().toString());
+            writer.newLine();
           }
+          writer.close();
+          System.out.println("File written successfully to out.txt");
+        }catch(Exception e){
+          e.printStackTrace();
+        }
         }
       }
 
